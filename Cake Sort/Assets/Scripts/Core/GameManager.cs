@@ -1,5 +1,6 @@
 using Scripts.Attributes;
 using Scripts.Board;
+using Scripts.Events;
 using Scripts.Settings;
 using UnityEngine;
 
@@ -11,6 +12,7 @@ namespace Scripts.Core
         #region PublicGetters
         
         public TaskManager TaskManager => _taskManager;
+        public EventsManager EventsManager => _eventsManager;
 
         public GridController GridController;
         public static GameManager Instance { get; private set; }
@@ -20,6 +22,7 @@ namespace Scripts.Core
         #region SystemParts
 
         private TaskManager _taskManager;
+        private EventsManager _eventsManager;
         
         #endregion
 
@@ -43,8 +46,18 @@ namespace Scripts.Core
                 _taskManager = null;
             }
 
+            if (_eventsManager != null)
+            {
+                _eventsManager.Dispose();
+                _eventsManager = null;
+            }
+
             _taskManager = new TaskManager();
             _taskManager.Init();
+
+            _eventsManager = new EventsManager();
+            _eventsManager.Init();
+            
             GridController.Init();
         }
         

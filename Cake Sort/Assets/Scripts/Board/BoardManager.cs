@@ -1,18 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class BoardManager : MonoBehaviour
+namespace Scripts.Gameplay
 {
-    // Start is called before the first frame update
-    void Start()
+    public class BoardManager : MonoBehaviour, IInitializable
     {
-        
-    }
+        public void Init()
+        {
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        public void Dispose()
+        {
+        }
     }
 }

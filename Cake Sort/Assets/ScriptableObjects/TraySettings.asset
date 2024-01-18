@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1873183828fd144bfb7f5c51f816320e, type: 3}
-  m_Name: GridSettings
+  m_Script: {fileID: 11500000, guid: 09e86b6a794544be496f2f2f154c30fb, type: 3}
+  m_Name: TraySettings
   m_EditorClassIdentifier: 
-  gridPrefab: {fileID: 5470668707122966041, guid: f8bff1275db46453c9c336715d8ba617, type: 3}
-  gridDistanceOffset: {x: 1, y: 1}
-  columnCount: 6
-  rowCount: 8
+  holderCount: 3
+  holderPrefab: {fileID: 4061204876560259400, guid: 6b401ddf2df344a509ab29dbbba05803, type: 3}
