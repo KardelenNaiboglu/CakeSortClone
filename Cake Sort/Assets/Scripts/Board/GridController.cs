@@ -41,7 +41,6 @@ namespace Scripts.Board
                     _grids[j, i] = createdGrid;
                 }   
             }
-          
         }
     }
 }

@@ -1,7 +1,5 @@
-using Scripts.Attributes;
 using Scripts.Board;
 using Scripts.Events;
-using Scripts.Settings;
 using UnityEngine;
 
 namespace Scripts.Core

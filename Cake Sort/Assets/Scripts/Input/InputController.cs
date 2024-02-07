@@ -1,27 +1,38 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
+using Lean.Touch;
+using Scripts.Core;
 using UnityEngine;
 
 namespace Scripts.Input
 {
     public class InputController : MonoBehaviour
     {
-        private void Update()
+        private void OnEnable()
         {
-            if (UnityEngine.Input.GetMouseButtonDown(0))
-            {
-                
-            }
-            else if (UnityEngine.Input.GetMouseButtonUp(0))
-            {
-                
-            }
-            else if (UnityEngine.Input.GetMouseButton(0))
-            {
-                
-            }
+            LeanTouch.OnFingerDown += OnFingerDown;
+            LeanTouch.OnFingerUp += OnFingerUp;
+            LeanTouch.OnFingerUpdate += OnFingerUpdate;
+        }
+
+        private void OnFingerUpdate(LeanFinger leanFinger)
+        {
+            GameManager.Instance.EventsManager.FingerPositionChanged(leanFinger.ScreenPosition);
+        }
+
+        private void OnFingerUp(LeanFinger leanFinger)
+        {
+            GameManager.Instance.EventsManager.FingerUp(leanFinger.ScreenPosition);
+        }
+
+        private void OnFingerDown(LeanFinger leanFinger)
+        {
+            GameManager.Instance.EventsManager.FingerDown(leanFinger.ScreenPosition);
         }
         
+        private void OnDisable()
+        {
+            LeanTouch.OnFingerDown -= OnFingerDown;
+            LeanTouch.OnFingerUp -= OnFingerUp;
+            LeanTouch.OnFingerUpdate -= OnFingerUpdate;
+        }
     }
 }
