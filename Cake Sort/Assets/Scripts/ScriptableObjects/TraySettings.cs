@@ -1,3 +1,4 @@
+using Scripts.Board;
 using UnityEngine;
 
 namespace Scripts.Settings
@@ -6,6 +7,7 @@ namespace Scripts.Settings
     public class TraySettings : ScriptableObject
     {
         public int holderCount;
-        public GameObject holderPrefab;
+        public PlateHolder holderPrefab;
+        public float distanceBetweenHolders;
     }
 }

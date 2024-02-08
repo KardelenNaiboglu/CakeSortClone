@@ -13,6 +13,7 @@ namespace Scripts.Core
         public EventsManager EventsManager => _eventsManager;
 
         public GridController GridController;
+        public TrayController TrayController;
         public static GameManager Instance { get; private set; }
 
         #endregion
@@ -57,6 +58,7 @@ namespace Scripts.Core
             _eventsManager.Init();
             
             GridController.Init();
+            TrayController.Init();
         }
         
         #endregion

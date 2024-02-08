@@ -9,7 +9,7 @@ namespace Scripts.Board
 
         [SerializeField] private GridSettings gridSettings;
         [SerializeField] private Transform gridsParent;
-        
+
         #endregion
 
         #region Variables
@@ -17,7 +17,7 @@ namespace Scripts.Board
         private Grid[,] _grids;
 
         #endregion
-        
+
         public void Init()
         {
             CreateGrids();
@@ -29,17 +29,24 @@ namespace Scripts.Board
 
             Grid createdGrid;
             _grids = new Grid[gridSettings.rowCount, gridSettings.columnCount];
-            
+
             for (int i = 0; i < gridSettings.columnCount; i++)
             {
                 for (int j = 0; j < gridSettings.rowCount; j++)
                 {
                     createdGrid = Instantiate(gridSettings.gridPrefab, gridsParent);
                     createdGrid.SetCoordinates(j, i);
-                    createdGrid.transform.localPosition = new Vector3(i * gridSettings.gridDistanceOffset.x, 0f,
-                        -j * gridSettings.gridDistanceOffset.y);
+                    createdGrid.transform.localPosition = new Vector3(
+                        i * gridSettings.gridDistanceOffset.x -
+                        (gridSettings.columnCount / 2 - (gridSettings.columnCount % 2 == 0 ? 0.5f : 0f)) *
+                        gridSettings.gridDistanceOffset.x, 0f,
+                        -(j * gridSettings.gridDistanceOffset.y -
+                          (gridSettings.rowCount / 2 - (gridSettings.rowCount % 2 == 0 ? 0.5f : 0f)) *
+                          gridSettings.gridDistanceOffset.y));
+                    
                     _grids[j, i] = createdGrid;
-                }   
+                    createdGrid.Init();
+                }
             }
         }
     }

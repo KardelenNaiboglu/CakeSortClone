@@ -12,4 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1b92bae510ab469dba535f262669c1c, type: 3}
   m_Name: CakeSettings
   m_EditorClassIdentifier: 
-  cakePieceSettingsList: []
+  prefabCakePiece: {fileID: 2620282218477698056, guid: 88aec343d81d54ad6ae4ae9a2fbb614e, type: 3}
+  cakePieceSettingsList:
+  - {fileID: 11400000, guid: 1d67515f04f8147958779841b6e03b4d, type: 2}
+  - {fileID: 11400000, guid: dd7513046b2164371948cf4591beaf8f, type: 2}
+  - {fileID: 11400000, guid: a958dfeda21ce4bef965215517cf2550, type: 2}
+  - {fileID: 11400000, guid: 055815f83569642aeaaa6dad603b94d0, type: 2}

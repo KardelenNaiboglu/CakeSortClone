@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: GridSettings
   m_EditorClassIdentifier: 
   gridPrefab: {fileID: 5470668707122966041, guid: f8bff1275db46453c9c336715d8ba617, type: 3}
-  gridDistanceOffset: {x: 1, y: 1}
-  columnCount: 6
-  rowCount: 8
+  gridDistanceOffset: {x: 1.1, y: 1.1}
+  columnCount: 5
+  rowCount: 5

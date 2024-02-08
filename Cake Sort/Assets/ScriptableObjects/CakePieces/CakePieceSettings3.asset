@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ec148d1f3ea9455f93d87a98d8281e9, type: 3}
   m_Name: CakePieceSettings3
   m_EditorClassIdentifier: 
-  CakePieceType: 3
+  CakePieceType: 2
   MainColor:
     serializedVersion: 2
-    rgba: 0
+    rgba: 4293486637
   SecondaryColor:
     serializedVersion: 2
-    rgba: 0
+    rgba: 4294945851

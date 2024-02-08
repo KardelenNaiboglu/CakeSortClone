@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: TraySettings
   m_EditorClassIdentifier: 
   holderCount: 3
-  holderPrefab: {fileID: 4061204876560259400, guid: 6b401ddf2df344a509ab29dbbba05803, type: 3}
+  holderPrefab: {fileID: 2427660365545931183, guid: 6b401ddf2df344a509ab29dbbba05803, type: 3}
+  distanceBetweenHolders: 1.5
